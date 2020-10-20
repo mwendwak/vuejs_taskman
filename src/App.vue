@@ -1,6 +1,8 @@
 <template>
 <div id="app">
     <div class="todo-app">
+        <Header />
+        <AddToDo />
         <Todos v-bind:todos="todos" v-on:del-todo="deleteToDo" />
     </div>
 </div>
@@ -8,11 +10,16 @@
 
 <script>
 import Todos from '@/components/Todos';
+import Header from '@/components/layout/Header'
+import AddToDo from '@/components/AddToDo'
 
 export default {
     name: 'App',
     components: {
-        Todos
+        Header,
+        Todos,
+        AddToDo
+
     },
     methods: {
         deleteToDo(id) {
