@@ -2,7 +2,7 @@
 <div id="app">
     <div class="todo-app">
         <Header />
-        <AddToDo />
+        <AddToDo v-on:add-todo="addTodo" />
         <Todos v-bind:todos="todos" v-on:del-todo="deleteToDo" />
     </div>
 </div>
@@ -24,6 +24,9 @@ export default {
     methods: {
         deleteToDo(id) {
             this.todos = this.todos.filter(todoVar => todoVar.id !== id);
+        },
+        addTodo(newTodo) {
+            this.todos = [...this.todos, newTodo];
         }
     },
     data() {
@@ -63,6 +66,19 @@ export default {
     justify-content: center;
     align-content: center;
 
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background: #555;
+    color: #fff;
+    padding: 7px 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #666;
 }
 
 .todo-app {
