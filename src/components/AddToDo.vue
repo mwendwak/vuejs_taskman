@@ -19,7 +19,6 @@ export default {
         addToDo(e) {
             e.preventDefault();
             const newToDo = {
-                id: Math.random(),
                 title: this.title,
                 completed: false,
             }

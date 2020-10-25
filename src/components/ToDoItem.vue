@@ -34,10 +34,11 @@ input {
 
 .todo-item {
     background: #f4f4f4;
-    color: #C70039;
+    color: purple;
     padding: 10px;
-    font-weight: bolder;
-    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: lowercase;
     border-bottom: 1px #ccc dotted;
 }
 
@@ -49,5 +50,10 @@ input {
     background: #ff0000;
     color: #fff;
     border: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: magenta;
+    border-radius: 4px;
 }
 </style>
